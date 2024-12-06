@@ -1,5 +1,7 @@
 <?php
 
+class Robot {}
+
 class C3PO extends Robot
 {
     protected $numeroDeSerie;
@@ -13,13 +15,14 @@ class C3PO extends Robot
         $this->numeroDeSerie = self::$compteur;
         $this->nom = $nom;
         echo "Je suis le droïde de protocole numéro " . $this->numeroDeSerie . ", enchanté de vous rencontrer !\n";
+        $this->initierProtocole();
     }
 
     public function initierProtocole()
     {
         $repos = false;
+        echo "En attente d’interaction utilisateur : \n";
         while ($repos == false) {
-            echo "En attente d’interaction utilisateur : \n";
             $var = trim(fgets(STDIN));
             if ($var == "repos") {
                 $repos = true;
