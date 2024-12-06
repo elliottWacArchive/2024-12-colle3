@@ -1,7 +1,5 @@
 <?php
 
-class Robot {}
-
 class C3PO extends Robot
 {
     protected $numeroDeSerie;
